@@ -9,14 +9,15 @@ const BottomContainer = ({
 }) => {
   const animateBorderRadius = scrollY.interpolate({
     inputRange: [0, 450 - 100],
-    outputRange: [35, 0],
+    outputRange: [40, 0],
   })
   return (
     <Animated.ScrollView
       showsVerticalScrollIndicator={false}
       contentContainerStyle={{
         paddingBottom: 200,
-        backgroundColor: '#fff'
+        backgroundColor: 'transparent',
+        marginTop: -100,
       }}
       onScroll={Animated.event(
         [{ nativeEvent: { contentOffset: { y: scrollY } } }],
@@ -40,14 +41,9 @@ const BottomContainer = ({
 
 const styles = StyleSheet.create({
   block: {
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
     backgroundColor: '#fff',
-    marginTop: -100,
     width: deviceWidth,
-    height: deviceHeight
+    height: deviceHeight,
   }
 })
 
