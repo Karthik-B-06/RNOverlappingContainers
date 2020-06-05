@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Animated, SafeAreaView, StatusBar, StyleSheet, View } from 'react-native';
+import { Animated, SafeAreaView, StatusBar, StyleSheet, View, Platform } from 'react-native';
 import { deviceHeight } from '../helpers/constants';
 import BottomContainer from './BottomContainer';
 import ImageContainer from './ImageContainer';
 import { LoadingAtom } from './LoadingAtom';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
 
 const OverlappingContainers = (props) => {
   const [scrollY, setScrollY] = useState(new Animated.Value(0));
@@ -11,8 +12,10 @@ const OverlappingContainers = (props) => {
   const placeHolderContent = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
   return (
     <View style={[styles.container]}>
-      <StatusBar barStyle='light-content' />
+      <StatusBar barStyle='light-content' backgroundColor='transparent' translucent={true} />
       <SafeAreaView>
+        <View style={{ height: Platform.OS === 'android' ? getStatusBarHeight() : 0 }}>
+        </View>
         <ImageContainer
           scrollY={scrollY}
           imageSource={imageSource}
