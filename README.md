@@ -1,10 +1,6 @@
 # RNOverlappingContainers
 
-
-
-![](RNOverlappingContainer.gif)
-
-![](AndroidGif.gif)
+[Read my blog here](https://medium.com/practicaldesign/react-native-overlapping-components-15c46af94872)
 
 
 ## Preview
