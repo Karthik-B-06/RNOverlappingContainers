@@ -5,6 +5,6 @@
 
 ## Preview
 
-| Android                                      | iOS                                          |
+| iOS                                          | Android                                      |
 |----------------------------------------------|----------------------------------------------|
 | ![](RNOverlappingContainer.gif)              | ![](AndroidGif.gif)                          |
