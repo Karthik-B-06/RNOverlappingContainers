@@ -15,7 +15,7 @@ const ImageContainer = ({
           transform: [
             {
               scale: scrollY.interpolate({
-                inputRange: [0, imageHeight - 100],
+                inputRange: [0, imageHeight],
                 outputRange: [1.2, 1],
                 extrapolate: 'clamp'
               })
