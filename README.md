@@ -1,6 +1,6 @@
 <h2> RNOverlappingContainers</h2>
 
-<p> A common pattern in mobiles involving a Image and a ScrollView </p>
+<p> A common pattern in mobiles involving an Image and a ScrollView </p>
 
 
 [Read my blog here !!](https://medium.com/practicaldesign/react-native-overlapping-components-15c46af94872)
